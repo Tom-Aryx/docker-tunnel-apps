@@ -11,6 +11,6 @@ COPY . .
 
 RUN chmod +x *.sh && ./download.sh
 
-EXPOSE 443
+EXPOSE 8080
 
 ENTRYPOINT ["./entrypoint.sh"]

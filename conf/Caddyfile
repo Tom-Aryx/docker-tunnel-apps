@@ -1,0 +1,7 @@
+:8080 {
+    reverse_proxy https://localhost:443 {
+        transport http {
+            tls insecure_skip_verify
+        }
+    }
+}
