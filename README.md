@@ -1,6 +1,6 @@
 # docker-tunnel-apps
 
-freshrss over cloudflare tunnel
+freshrss with nezha agent
 
 ## HOW TO USE
 
