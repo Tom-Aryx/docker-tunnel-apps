@@ -18,8 +18,3 @@ CADDY_VERSION="$(curl -s https://api.github.com/repos/caddyserver/caddy/releases
 
 wget -q https://github.com/caddyserver/caddy/releases/download/v${CADDY_VERSION}/caddy_${CADDY_VERSION}_linux_amd64.tar.gz
 tar -xz -f caddy_${CADDY_VERSION}_linux_amd64.tar.gz && rm caddy_${CADDY_VERSION}_linux_amd64.tar.gz LICENSE README.md
-
-CF_VERSION="$(curl -s https://api.github.com/repos/cloudflare/cloudflared/releases | grep -m 1 -oP '"tag_name":\s*"\K[^"]+')"
-
-wget -q https://github.com/cloudflare/cloudflared/releases/download/${CF_VERSION}/cloudflared-linux-amd64
-mv cloudflared-linux-amd64 cloudflared && chmod +x cloudflared

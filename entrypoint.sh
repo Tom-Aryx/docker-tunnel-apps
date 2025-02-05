@@ -39,16 +39,12 @@ if [ ! -s /etc/supervisor/conf.d/damon.conf ]; then
     # caddy
     CADDY_CMD="$WORK_DIR/caddy run --config $CONF_DIR/Caddyfile --watch"
 
-    # cloudflared
-    CLOUDFLARED_CMD="$WORK_DIR/cloudflared tunnel --edge-ip-version auto --protocol http2 run --token $ARGO_TOKEN"
-
     # supervisor
     ## copy template
     cp ${CONF_DIR}/damon.conf /etc/supervisor/conf.d/damon.conf
     ## replace commands
     sed -e "s#-adguard-cmd-#$ADGUARD_CMD#g" \
         -e "s#-caddy-cmd-#$CADDY_CMD#g" \
-        -e "s#-cloudflared-cmd-#$CLOUDFLARED_CMD#g" \
         -i /etc/supervisor/conf.d/damon.conf
 fi
 

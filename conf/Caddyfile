@@ -1,4 +1,4 @@
-:8080 {
+:3000 {
     reverse_proxy {
         to https://localhost:443
         transport http {
