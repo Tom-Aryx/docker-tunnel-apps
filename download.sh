@@ -4,8 +4,7 @@
 AGENT_VERSION="v1.2.0"
 
 wget -q https://github.com/nezhahq/agent/releases/download/${AGENT_VERSION}/nezha-agent_linux_amd64.zip
-unzip nezha-agent_linux_amd64.zip && rm nezha-agent_linux_amd64.zip
-mv nezha-agent agent && chmod +x agent
+unzip nezha-agent_linux_amd64.zip && rm nezha-agent_linux_amd64.zip && mv nezha-agent agent && chmod +x agent
 
 MEMOS_VERISON="$(curl -s https://api.github.com/repos/usememos/memos/releases | grep -m 1 -oP '"tag_name":\s*"\K[^"]+')"
 

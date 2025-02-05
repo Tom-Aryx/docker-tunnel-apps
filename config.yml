@@ -12,7 +12,7 @@ ip_report_period: 1800
 #nic_allowlist: ''
 report_delay: 4
 self_update_period: 0
-server: 127.0.0.1:8008
+server: -server-host-
 skip_connection_count: false
 skip_procs_count: false
 temperature: false
